@@ -1,7 +1,7 @@
 ---
 hero:
   title: rc-codebox
-  desc: 基于react hooks的移动端手机验证码输入框
+  desc: 基于react hooks的移动端手机验证码组件
   actions:
     - text: Getting Started
       link: /code-box
