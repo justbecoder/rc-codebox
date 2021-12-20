@@ -1,33 +1,7 @@
 # rc-codebox
 
+基于 React Hooks 的移动端手机验证码组件
+
 ## Getting Started
 
-Install dependencies,
-
-```bash
-$ npm i
-```
-
-Start the dev server,
-
-```bash
-$ npm start
-```
-
-Build documentation,
-
-```bash
-$ npm run docs:build
-```
-
-Run test,
-
-```bash
-$ npm test
-```
-
-Build library via `father-build`,
-
-```bash
-$ npm run build
-```
+文档地址：[传送门](https://justbecoder.github.io/rc-codebox/)
