@@ -1,6 +1,6 @@
 {
   "name": "rc-codebox",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -11,9 +11,12 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
     "prepublishOnly": "npm run build",
-    "release": "npm run build && npm publish"
+    "release": "npm run build && standard-version  && npm publish"
   },
-  "keywords": ["手机验证码", "验证码"],
+  "keywords": [
+    "手机验证码",
+    "验证码"
+  ],
   "author": "huxiaoshuai<727671950@qq.com>",
   "license": "ISC",
   "files": [
@@ -38,8 +41,6 @@
       "prettier --parser=typescript --write"
     ]
   },
-  "dependencies": {
-  },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
@@ -51,6 +52,7 @@
     "gh-pages": "^3.0.0",
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
+    "standard-version": "^9.3.2",
     "yorkie": "^2.0.0"
   },
   "peerDependencies": {
