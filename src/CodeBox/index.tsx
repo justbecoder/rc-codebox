@@ -3,7 +3,7 @@
  * @author: huxiaoshuai
  * @Date: 2021-12-20 17:46:36
  * @LastEditors: huxiaoshuai
- * @LastEditTime: 2021-12-21 14:55:21
+ * @LastEditTime: 2021-12-21 15:36:28
  */
 
 import React, { useRef } from 'react';
@@ -19,10 +19,16 @@ interface CodeBoxProps {
    * @description 验证码改变时的callback
    */
   onChange?: (code: string) => void;
+
+  /**
+   * @description 自定义类名
+   *
+   */
+  className?: string;
 }
 
 export function CodeBox(props: CodeBoxProps) {
-  const { len = 6, onChange } = props;
+  const { len = 6, onChange, className = '' } = props;
 
   // 输入框数组
   const inputArr = new Array(len).fill('');
@@ -91,14 +97,22 @@ export function CodeBox(props: CodeBoxProps) {
     onChange && onChange(code);
   };
 
+  const getInputClassName = (index: number) => {
+    const currentInputRef = inputRefs.current[index];
+    const value = currentInputRef?.value;
+    const defaultClassName = 'code-box-input';
+
+    return value ? defaultClassName + ' has-string' : defaultClassName;
+  };
+
   return (
-    <div className="code-box">
+    <div className={className ? `code-box ${className}` : 'code-box'}>
       {inputArr.map((v, index) => {
         return (
           <input
             ref={getRef}
             maxLength={1}
-            className="code-box-input"
+            className={getInputClassName(index)}
             key={index}
             type="text"
             onFocus={() => {

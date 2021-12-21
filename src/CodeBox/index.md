@@ -21,7 +21,7 @@ export default () => {
   return (
     <div>
       <h3>现在输入的code是：{code}</h3>
-      <CodeBox onChange={onChange}></CodeBox>
+      <CodeBox className="demo" onChange={onChange}></CodeBox>
     </div>
   );
 };
