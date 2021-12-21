@@ -11,7 +11,7 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
     "prepublishOnly": "npm run build",
-    "release": "npm run build && standard-version  && npm publish"
+    "release": "npm run build && standard-version && npm publish"
   },
   "keywords": [
     "手机验证码",

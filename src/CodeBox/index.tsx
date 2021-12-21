@@ -3,13 +3,13 @@
  * @author: huxiaoshuai
  * @Date: 2021-12-20 17:46:36
  * @LastEditors: huxiaoshuai
- * @LastEditTime: 2021-12-20 21:13:16
+ * @LastEditTime: 2021-12-21 14:55:21
  */
 
 import React, { useRef } from 'react';
 import './index.less';
 
-interface CodeBox {
+interface CodeBoxProps {
   /**
    * @description 验证码的位数
    * @default 6
@@ -21,7 +21,7 @@ interface CodeBox {
   onChange?: (code: string) => void;
 }
 
-export function CodeBox(props: CodeBox) {
+export function CodeBox(props: CodeBoxProps) {
   const { len = 6, onChange } = props;
 
   // 输入框数组
