@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/justbecoder/rc-codebox/compare/v1.2.0...v1.3.0) (2021-12-21)
+
+
+### Features
+
+* 配置github workflow ([4343d10](https://github.com/justbecoder/rc-codebox/commit/4343d103d09d9f81bc5990163fdb81d8c7ce3cfb))
+* 优化组件interface，引入standard-version ([ea7abf8](https://github.com/justbecoder/rc-codebox/commit/ea7abf8b48073b0786bdf59d18f698f7958d64b3))
+
 ## 1.2.0 (2021-12-21)
 
 
