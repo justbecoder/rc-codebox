@@ -1,6 +1,6 @@
 {
   "name": "rc-codebox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -14,10 +14,19 @@
     "release": "npm run build && npm publish"
   },
   "keywords": ["手机验证码", "验证码"],
-  "author": "huxiaoshuai<justbecoder@aliyun.com>",
+  "author": "huxiaoshuai<727671950@qq.com>",
   "license": "ISC",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "main": "lib/index.js",
   "module": "es/index.js",
   "typings": "es/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justbecoder/rc-codebox"
+  },
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
