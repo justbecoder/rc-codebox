@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/justbecoder/rc-codebox/compare/v1.3.0...v1.4.0) (2022-01-12)
+
+
+### Features
+
+* 新增验证码输入框自动获取焦点功能 ([0240bf1](https://github.com/justbecoder/rc-codebox/commit/0240bf1def18154c64f22d3c06bd1aba0ed909e2))
+
 ## [1.3.0](https://github.com/justbecoder/rc-codebox/compare/v1.2.0...v1.3.0) (2021-12-21)
 
 
