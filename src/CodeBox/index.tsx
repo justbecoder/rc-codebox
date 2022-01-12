@@ -3,10 +3,10 @@
  * @author: huxiaoshuai
  * @Date: 2021-12-20 17:46:36
  * @LastEditors: huxiaoshuai
- * @LastEditTime: 2021-12-21 15:36:28
+ * @LastEditTime: 2022-01-12 19:51:57
  */
 
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import './index.less';
 
 interface CodeBoxProps {
@@ -25,10 +25,16 @@ interface CodeBoxProps {
    *
    */
   className?: string;
+
+  /**
+   * @description 是否自动获取焦点
+   * @default true
+   */
+  autoFocus?: boolean;
 }
 
 export function CodeBox(props: CodeBoxProps) {
-  const { len = 6, onChange, className = '' } = props;
+  const { len = 6, onChange, className = '', autoFocus = true } = props;
 
   // 输入框数组
   const inputArr = new Array(len).fill('');
@@ -48,11 +54,12 @@ export function CodeBox(props: CodeBoxProps) {
   };
 
   /**
-   * @method onInputKeyUp
+   * @method onInputKeyDown
    * @method 处理input的删除事件
+   * @param e 事件
    * @param index number input输入框对应的索引
    */
-  const onInputKeyUp = (e: any, index: number) => {
+  const onInputKeyDown = (e: any, index: number) => {
     switch (e.key) {
       case 'Backspace':
         if (index > 0 && !e.target.value) {
@@ -105,6 +112,12 @@ export function CodeBox(props: CodeBoxProps) {
     return value ? defaultClassName + ' has-string' : defaultClassName;
   };
 
+  useEffect(() => {
+    if (autoFocus) {
+      inputRefs?.current[0].focus();
+    }
+  }, [autoFocus]);
+
   return (
     <div className={className ? `code-box ${className}` : 'code-box'}>
       {inputArr.map((v, index) => {
@@ -119,7 +132,7 @@ export function CodeBox(props: CodeBoxProps) {
               inputRefs.current[index].select();
             }}
             onKeyDown={(e) => {
-              onInputKeyUp(e, index);
+              onInputKeyDown(e, index);
             }}
             onChange={(e) => {
               onInputValueChange(index, e);
